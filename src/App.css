@@ -1,0 +1,860 @@
+body {
+  font-family: "Lora", serif;
+  color: #1a2a44;
+  background-color: #f8f1e9;
+  margin: 0;
+  padding: 0;
+}
+/* Navbar Styles */
+.navbar-custom {
+  background: linear-gradient(135deg, #1A2A44 0%, #2b3a5a 100%); /* Deep blue gradient */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  padding: 1rem 0;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand-custom {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #D4AF37 !important; /* Gold */
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.navbar-brand-custom::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #D4AF37;
+  transition: width 0.3s ease;
+}
+
+.navbar-brand-custom:hover::after {
+  width: 100%;
+}
+
+.nav-link-custom {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  color: #F8F1E9 !important; /* Ivory */
+  margin: 0 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #D4AF37;
+  transition: width 0.3s ease;
+}
+
+.nav-link-custom:hover::before {
+  width: 100%;
+}
+
+.nav-link-custom:hover {
+  color: #D4AF37 !important; /* Gold on hover */
+}
+
+.navbar-toggle-custom {
+  border-color: #D4AF37 !important;
+}
+
+.navbar-toggle-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23D4AF37' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.toggle-btn {
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.2);
+}
+.card .rating-badge {
+  vertical-align: middle;
+}
+
+.card .favorite-btn {
+  transition: transform 0.3s ease;
+}
+
+.card .favorite-btn:hover {
+  transform: scale(1.2);
+}
+
+.dropdown-toggle {
+  background-color: #D4AF37 !important;
+  border-color: #D4AF37 !important;
+}
+
+.dropdown-toggle:hover {
+  background-color: #b8962e !important;
+  border-color: #b8962e !important;
+}
+/* Dark Mode Adjustments */
+.dark-mode .navbar-custom {
+  background: linear-gradient(135deg, #333 0%, #444 100%);
+}
+
+.dark-mode .nav-link-custom {
+  color: #F8F1E9 !important;
+}
+
+.dark-mode .nav-link-custom:hover {
+  color: #D4AF37 !important;
+}
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  color: #1a2a44;
+}
+
+.App {
+  overflow-x: hidden;
+}
+
+/* Parallax Effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+/* Cards */
+.card .availability-btn {
+  transition: transform 0.3s ease;
+}
+
+.card .availability-btn:hover {
+  transform: scale(1.05);
+}
+
+.card .compare-btn {
+  transition: transform 0.3s ease;
+}
+
+.card .compare-btn:hover {
+  transform: scale(1.05);
+}
+
+.table th, .table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table th {
+  background-color: #1A2A44;
+  color: #F8F1E9;
+}
+
+.table td {
+  background-color: #F8F1E9;
+}
+.card {
+  background-color: #f8f1e9;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #d4af37;
+  border-color: #d4af37;
+  font-family: "Playfair Display", serif;
+}
+
+.btn-primary:hover {
+  background-color: #b8962e;
+  border-color: #b8962e;
+}
+
+
+
+/* Dark Mode Adjustments */
+.dark-mode {
+  background-color: #1a2a44;
+  color: #f8f1e9;
+}
+
+.dark-mode .card {
+  background-color: #2b3a5a;
+  color: #f8f1e9;
+}
+
+.dark-mode .modal-content {
+  background-color: #2b3a5a;
+  color: #f8f1e9;
+}
+.sticky-reserve-bar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* Moved to the right */
+  transform: none; /* Remove centering */
+  background-color: #1A2A44;
+  color: #F8F1E9;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 300px; /* Adjusted for right alignment */
+}
+.bg-light {
+  background-color: #F8F1E9 !important;
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: #F8F1E9;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #D4AF37;
+  transform: scale(1.2) rotate(5deg);
+}
+
+.back-to-top {
+  border-color: #D4AF37;
+  color: #D4AF37;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #D4AF37;
+  color: #1A2A44;
+}
+/* ResortSection Comparison Table */
+.best-value {
+  background-color: #D4AF37 !important;
+  color: #1A2A44 !important;
+  font-weight: bold;
+}
+
+.table th:hover {
+  background-color: #2b3a5a;
+}
+
+.compare-btn, .availability-btn, .favorite-btn {
+  transition: transform 0.3s ease;
+}
+
+.compare-btn:hover, .availability-btn:hover, .favorite-btn:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .table-responsive {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .table-responsive {
+    font-size: 0.6rem; /* Adjusted for more rows */
+  }
+  .table img {
+    max-width: 50px !important;
+    max-height: 50px !important;
+  }
+}
+
+/* Home Carousel */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+}
+
+.hero-btn {
+  padding: 12px 24px;
+}
+
+@media (max-width: 576px) {
+  .hero-btn {
+    padding: 8px 16px;
+  }
+  .carousel-item img {
+    height: 200px !important;
+  }
+  .carousel-item .p-4 {
+    padding: 1rem !important;
+    font-size: 0.9rem; /* Smaller text for more content */
+  }
+}
+
+/* Footer */
+.footer-btn {
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .footer-btn {
+    width: 100%;
+  }
+}
+
+footer a:hover {
+  color: #D4AF37 !important;
+  text-decoration: none;
+}
+/* ResortDetail */
+.resort-detail img {
+  transition: transform 0.3s ease;
+}
+
+.resort-detail img:hover {
+  transform: scale(1.05);
+}
+
+.resort-detail .btn {
+  transition: transform 0.3s ease;
+}
+
+.resort-detail .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Reviews Section */
+.list-group-item {
+  border-left: 4px solid #D4AF37;
+}
+
+/* About */
+.about-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-section li:before {
+  content: "✓ ";
+  color: #D4AF37;
+}
+
+.team-card .card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-card .card:hover {
+  transform: scale(1.05);
+}
+
+/* Timeline */
+.timeline {
+  list-style-type: none;
+  padding-left: 0;
+  position: relative;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background: #D4AF37;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-year {
+  font-weight: bold;
+  color: #D4AF37;
+  margin-left: 40px;
+}
+
+.timeline-content {
+  margin-left: 40px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  background: #D4AF37;
+  border-radius: 50%;
+}
+/* ResortDetail */
+.resort-detail img {
+  transition: transform 0.3s ease;
+}
+
+.resort-detail img:hover {
+  transform: scale(1.05);
+}
+
+.resort-detail .btn {
+  transition: transform 0.3s ease;
+}
+
+.resort-detail .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Photo Gallery */
+.carousel-item img {
+  border-radius: 10px;
+}
+
+/* Reviews Section */
+.list-group-item {
+  border-left: 4px solid #D4AF37;
+}
+
+/* Live Chat */
+.chat-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chat-modal .modal-dialog {
+  max-width: 400px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+}
+
+.chat-history {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+}
+
+.user-message {
+  text-align: right;
+  color: #1A2A44;
+}
+
+.support-message {
+  text-align: left;
+  color: #D4AF37;
+}
+
+/* About */
+.about-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-section li:before {
+  content: "✓ ";
+  color: #D4AF37;
+}
+
+.team-card .card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-card .card:hover {
+  transform: scale(1.05);
+}
+
+.timeline {
+  list-style-type: none;
+  padding-left: 0;
+  position: relative;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background: #D4AF37;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-year {
+  font-weight: bold;
+  color: #D4AF37;
+  margin-left: 40px;
+}
+
+.timeline-content {
+  margin-left: 40px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  background: #D4AF37;
+  border-radius: 50%;
+}
+
+/* ResortDetail */
+.resort-detail img {
+  transition: transform 0.3s ease;
+}
+
+.resort-detail img:hover {
+  transform: scale(1.05);
+}
+
+.resort-detail .btn {
+  transition: transform 0.3s ease;
+}
+
+.resort-detail .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Photo Gallery & Map */
+.carousel-item img, iframe {
+  border-radius: 10px;
+}
+
+/* Reviews Section */
+.list-group-item {
+  border-left: 4px solid #D4AF37;
+}
+
+/* Live Chat */
+.chat-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chat-modal .modal-dialog {
+  max-width: 400px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+}
+
+.chat-history {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+}
+
+.user-message {
+  text-align: right;
+  color: #1A2A44;
+}
+
+.support-message {
+  text-align: left;
+  color: #D4AF37;
+}
+
+/* About */
+.about-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-section li:before {
+  content: "✓ ";
+  color: #D4AF37;
+}
+
+.team-card .card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-card .card:hover {
+  transform: scale(1.05);
+}
+
+.timeline {
+  list-style-type: none;
+  padding-left: 0;
+  position: relative;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background: #D4AF37;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(10px);
+}
+
+.timeline-year {
+  font-weight: bold;
+  color: #D4AF37;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.timeline-content {
+  margin-left: 40px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.timeline-details {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  background: #D4AF37;
+  border-radius: 50%;
+}
+
+/* Testimonials */
+.testimonial-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-card iframe {
+  border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+  .resort-detail .text-center img {
+    max-width: 200px !important;
+  }
+  .carousel-item img {
+    height: 200px !important;
+  }
+  .chat-modal .modal-dialog {
+    max-width: 300px;
+  }
+  .chat-history {
+    max-height: 200px;
+  }
+  .about-section h3 {
+    font-size: 1.25rem;
+  }
+  .about-section p, .about-section li {
+    font-size: 0.9rem;
+  }
+  .team-card .card-img-top {
+    height: 150px !important;
+  }
+  .team-card .card-title {
+    font-size: 1.1rem;
+  }
+  .team-card .card-subtitle {
+    font-size: 0.9rem;
+  }
+  .team-card .card-text {
+    font-size: 0.8rem;
+  }
+  .timeline-year {
+    font-size: 1rem;
+  }
+  .timeline-content {
+    font-size: 0.9rem;
+  }
+  .timeline-details {
+    font-size: 0.8rem;
+  }
+  .testimonial-card .card-title {
+    font-size: 1.1rem;
+  }
+  .testimonial-card .card-subtitle {
+    font-size: 0.9rem;
+  }
+  .testimonial-card .card-text {
+    font-size: 0.8rem;
+  }
+  .testimonial-card iframe {
+    height: 100px !important;
+  }
+}
+
+/* Contact Form */
+.contact-btn {
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .contact-btn {
+    width: 100%;
+  }
+}
+/* Home Carousel */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+}
+
+.hero-btn {
+  padding: 12px 24px;
+}
+
+@media (max-width: 576px) {
+  .hero-btn {
+    padding: 8px 16px;
+  }
+  .carousel-item img {
+    height: 200px !important; /* Smaller on mobile */
+  }
+  .carousel-item .p-4 {
+    padding: 1rem !important; /* Less padding on mobile */
+  }
+}
+/* Existing styles remain unchanged, adding specific tweaks for Home.js Photo Gallery */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.carousel-caption h3 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 720px) {
+  .carousel-item img {
+    height: 500px !important;
+  }
+  .carousel-caption h3 {
+    font-size: 1rem;
+  }
+}
+/* Existing styles remain unchanged, adding specific tweaks for Home.js Photo Gallery */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.carousel-caption h3 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* Filter Buttons */
+.filter-buttons .btn {
+  transition: all 0.3s ease;
+}
+
+.filter-buttons .btn:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 576px) {
+  .carousel-item img {
+    height: 200px !important;
+  }
+  .carousel-caption h3 {
+    font-size: 1rem;
+  }
+  .filter-buttons .btn {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+}
